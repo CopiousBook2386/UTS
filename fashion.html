@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop9 — Fashion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">SHOP9</a>
+      <span class="tag">Gaya & Trend Terbaru</span>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="elektronik.html">Elektronik</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="perabot.html">Perabot</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Cari produk fashion..." />
+    </div>
+
+    <div class="header-actions">
+      <button id="cartToggle" class="cart-btn" aria-label="Buka keranjang">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="filters">
+      <h3>Filter Harga</h3>
+      <div>
+        <label>Min Harga</label>
+        <input id="minPrice" type="number" placeholder="0" />
+      </div>
+      <div>
+        <label>Maks Harga</label>
+        <input id="maxPrice" type="number" placeholder="0" />
+      </div>
+      <button id="applyFilter">Terapkan</button>
+      <button id="resetFilter" class="muted">Reset</button>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-header">
+        <h1 id="shoes">Fashion</h1>
+        <p class="muted">Pakaian, sepatu, tas & aksesoris.</p>
+      </div>
+
+      <div id="productsGrid" class="products-grid" data-category="fashion">
+        <!-- 10 produk fashion -->
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=31" alt="Kaos"></div>
+          <div class="name">Kaos Polos Cotton</div>
+          <div class="price">Rp 120.000</div>
+          <div class="info">Bahan lembut & nyaman.</div>
+          <div class="stock">Stok: <span class="stock-count">25</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=32" alt="Jeans"></div>
+          <div class="name">Celana Jeans Slim</div>
+          <div class="price">Rp 320.000</div>
+          <div class="info">Model slim fit.</div>
+          <div class="stock">Stok: <span class="stock-count">18</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=800&auto=format&fit=crop&q=60&sig=33" alt="Hoodie"></div>
+          <div class="name">Hoodie Oversize</div>
+          <div class="price">Rp 340.000</div>
+          <div class="info">Hangat & stylish.</div>
+          <div class="stock">Stok: <span class="stock-count">8</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1495121605193-b116b5b09a6b?w=800&auto=format&fit=crop&q=60&sig=34" alt="Tas"></div>
+          <div class="name">Tas Selempang</div>
+          <div class="price">Rp 230.000</div>
+          <div class="info">Ringan & elegan.</div>
+          <div class="stock">Stok: <span class="stock-count">11</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1503342452485-86f7b4f8c9f1?w=800&auto=format&fit=crop&q=60&sig=35" alt="Topi"></div>
+          <div class="name">Topi Baseball</div>
+          <div class="price">Rp 95.000</div>
+          <div class="info">Satu ukuran, bahan adem.</div>
+          <div class="stock">Stok: <span class="stock-count">30</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=36" alt="Jaket Denim"></div>
+          <div class="name">Jaket Denim</div>
+          <div class="price">Rp 450.000</div>
+          <div class="info">Tahan lama & stylish.</div>
+          <div class="stock">Stok: <span class="stock-count">12</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=37" alt="Sepatu"></div>
+          <div class="name">Sepatu Boots</div>
+          <div class="price">Rp 670.000</div>
+          <div class="info">Kuat & fashionable.</div>
+          <div class="stock">Stok: <span class="stock-count">6</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=38" alt="Dress"></div>
+          <div class="name">Dress Casual</div>
+          <div class="price">Rp 670.000</div>
+          <div class="info">Cocok untuk sehari-hari.</div>
+          <div class="stock">Stok: <span class="stock-count">7</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1520975910071-7f5bb7f2a9cf?w=800&auto=format&fit=crop&q=60&sig=39" alt="Kacamata"></div>
+          <div class="name">Kacamata Stylish</div>
+          <div class="price">Rp 180.000</div>
+          <div class="info">Aksesoris fashion keren.</div>
+          <div class="stock">Stok: <span class="stock-count">15</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar (sama) -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Keranjangmu</h2>
+      <button id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="primary">Checkout</button>
+        <button id="clearCartBtn" class="muted">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2025 Shop9</div>
+    <div class="footer-right muted">Belanja lokal — mudah & cepat</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop9 — Perabot</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">SHOP9</a>
+      <span class="tag">Perabot & Dekorasi Rumah</span>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="elektronik.html">Elektronik</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="perabot.html">Perabot</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Cari produk perabot..." />
+    </div>
+
+    <div class="header-actions">
+      <button id="cartToggle" class="cart-btn" aria-label="Buka keranjang">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="filters">
+      <h3>Filter Harga</h3>
+      <div>
+        <label>Min Harga</label>
+        <input id="minPrice" type="number" placeholder="0" />
+      </div>
+      <div>
+        <label>Maks Harga</label>
+        <input id="maxPrice" type="number" placeholder="0" />
+      </div>
+      <button id="applyFilter">Terapkan</button>
+      <button id="resetFilter" class="muted">Reset</button>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-header">
+        <h1 id="kitchen">Perabot Rumah</h1>
+        <p class="muted">Peralatan rumah & dekorasi.</p>
+      </div>
+
+      <div id="productsGrid" class="products-grid" data-category="home">
+        <!-- 10 produk perabot -->
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?w=800&auto=format&fit=crop&q=60&sig=41" alt="Kursi"></div>
+          <div class="name">Kursi Kayu Jati</div>
+          <div class="price">Rp 870.000</div>
+          <div class="info">Kuat & estetik.</div>
+          <div class="stock">Stok: <span class="stock-count">6</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&auto=format&fit=crop&q=60&sig=42" alt="Meja"></div>
+          <div class="name">Meja Makan Minimalis</div>
+          <div class="price">Rp 1.900.000</div>
+          <div class="info">Desain modern & ringkas.</div>
+          <div class="stock">Stok: <span class="stock-count">4</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1567016432779-3d1d5c7a9e2f?w=800&auto=format&fit=crop&q=60&sig=43" alt="Lemari"></div>
+          <div class="name">Lemari Pakaian</div>
+          <div class="price">Rp 2.700.000</div>
+          <div class="info">Ruang besar & rapi.</div>
+          <div class="stock">Stok: <span class="stock-count">3</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1582582494702-2e9b6f9683a1?w=800&auto=format&fit=crop&q=60&sig=44" alt="Rak Buku"></div>
+          <div class="name">Rak Buku Modern</div>
+          <div class="price">Rp 850.000</div>
+          <div class="info">Rapi & minimalis.</div>
+          <div class="stock">Stok: <span class="stock-count">7</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&auto=format&fit=crop&q=60&sig=45" alt="Sofa"></div>
+          <div class="name">Sofa 3 Dudukan</div>
+          <div class="price">Rp 3.200.000</div>
+          <div class="info">Kenyamanan maksimum.</div>
+          <div class="stock">Stok: <span class="stock-count">2</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&auto=format&fit=crop&q=60&sig=46" alt="Lampu"></div>
+          <div class="name">Lampu Tidur Minimalis</div>
+          <div class="price">Rp 350.000</div>
+          <div class="info">Hangat & hemat energi.</div>
+          <div class="stock">Stok: <span class="stock-count">10</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1542060747-02a7fbf07b9a?w=800&auto=format&fit=crop&q=60&sig=47" alt="Cermin"></div>
+          <div class="name">Cermin Dinding Elegan</div>
+          <div class="price">Rp 420.000</div>
+          <div class="info">Membuat ruang lebih luas.</div>
+          <div class="stock">Stok: <span class="stock-count">8</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&auto=format&fit=crop&q=60&sig=48" alt="Karpet"></div>
+          <div class="name">Karpet Lembut</div>
+          <div class="price">Rp 570.000</div>
+          <div class="info">Nyaman di kamar & ruang tamu.</div>
+          <div class="stock">Stok: <span class="stock-count">5</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&auto=format&fit=crop&q=60&sig=49" alt="Gorden"></div>
+          <div class="name">Gorden Minimalis</div>
+          <div class="price">Rp 270.000</div>
+          <div class="info">Mudah dipasang & awet.</div>
+          <div class="stock">Stok: <span class="stock-count">9</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar (sama) -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Keranjangmu</h2>
+      <button id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="primary">Checkout</button>
+        <button id="clearCartBtn" class="muted">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2025 Shop9</div>
+    <div class="footer-right muted">Belanja lokal — mudah & cepat</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

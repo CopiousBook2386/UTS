@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop9 — Beranda (Best Seller)</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">SHOP9</a>
+      <span class="tag">Best Seller — Pilihan Terbaik</span>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="elektronik.html">Elektronik</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="perabot.html">Perabot</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Cari produk, mis. smartphone, sepatu..." />
+    </div>
+
+    <div class="header-actions">
+      <button id="cartToggle" class="cart-btn" aria-label="Buka keranjang">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="filters">
+      <h3>Filter Harga</h3>
+      <div>
+        <label>Min Harga</label>
+        <input id="minPrice" type="number" placeholder="0" />
+      </div>
+      <div>
+        <label>Maks Harga</label>
+        <input id="maxPrice" type="number" placeholder="0" />
+      </div>
+      <button id="applyFilter">Terapkan</button>
+      <button id="resetFilter" class="muted">Reset</button>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-header">
+        <h1>Best Seller</h1>
+        <p class="muted">10 produk terlaris dari berbagai kategori.</p>
+      </div>
+
+      <div id="productsGrid" class="products-grid" aria-live="polite">
+        <!-- 10 produk best seller (static HTML, src langsung) -->
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60&sig=11" alt="Laptop Pro"></div>
+          <div class="name">Laptop Pro 14"</div>
+          <div class="price">Rp 14.500.000</div>
+          <div class="info">Performa tinggi untuk kerja & kreatif.</div>
+          <div class="stock">Stok: <span class="stock-count">5</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=60&sig=12" alt="Smartphone"></div>
+          <div class="name">Smartphone 5G</div>
+          <div class="price">Rp 6.800.000</div>
+          <div class="info">Kamera & baterai tahan lama.</div>
+          <div class="stock">Stok: <span class="stock-count">8</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1526178616111-74d72c4ee6f2?w=800&auto=format&fit=crop&q=60&sig=13" alt="Headphone"></div>
+          <div class="name">Headphone Wireless X</div>
+          <div class="price">Rp 870.000</div>
+          <div class="info">Noise-cancelling ringan.</div>
+          <div class="stock">Stok: <span class="stock-count">20</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&auto=format&fit=crop&q=60&sig=14" alt="Sneakers"></div>
+          <div class="name">Sneakers X9</div>
+          <div class="price">Rp 720.000</div>
+          <div class="info">Nyaman & stylish.</div>
+          <div class="stock">Stok: <span class="stock-count">9</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&auto=format&fit=crop&q=60&sig=15" alt="Sofa"></div>
+          <div class="name">Sofa Minimalis</div>
+          <div class="price">Rp 2.700.000</div>
+          <div class="info">Nyaman untuk ruang tamu.</div>
+          <div class="stock">Stok: <span class="stock-count">4</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1542060747-02a7fbf07b9a?w=800&auto=format&fit=crop&q=60&sig=16" alt="Jam Tangan"></div>
+          <div class="name">Jam Tangan Classic</div>
+          <div class="price">Rp 1.550.000</div>
+          <div class="info">Desain elegan & tahan air.</div>
+          <div class="stock">Stok: <span class="stock-count">6</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&auto=format&fit=crop&q=60&sig=17" alt="Tas Kulit"></div>
+          <div class="name">Tas Kulit Premium</div>
+          <div class="price">Rp 1.100.000</div>
+          <div class="info">Kualitas kulit asli (look).</div>
+          <div class="stock">Stok: <span class="stock-count">4</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800&auto=format&fit=crop&q=60&sig=18" alt="Meja Makan"></div>
+          <div class="name">Meja Makan 4 Kursi</div>
+          <div class="price">Rp 1.900.000</div>
+          <div class="info">Minimalis & kuat.</div>
+          <div class="stock">Stok: <span class="stock-count">2</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800&auto=format&fit=crop&q=60&sig=19" alt="Microwave"></div>
+          <div class="name">Microwave Oven</div>
+          <div class="price">Rp 980.000</div>
+          <div class="info">Praktis & hemat listrik.</div>
+          <div class="stock">Stok: <span class="stock-count">5</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Keranjangmu</h2>
+      <button id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="primary">Checkout</button>
+        <button id="clearCartBtn" class="muted">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2025 Shop9</div>
+    <div class="footer-right muted">Belanja lokal — mudah & cepat</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

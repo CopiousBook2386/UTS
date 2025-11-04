@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop9 — Elektronik</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html" class="logo">SHOP9</a>
+      <span class="tag">Elektronik Terbaru & Terbaik</span>
+    </div>
+
+    <nav>
+      <ul class="navbar">
+        <li><a href="index.html" class="active">Beranda</a></li>
+        <li><a href="elektronik.html">Elektronik</a></li>
+        <li><a href="fashion.html">Fashion</a></li>
+        <li><a href="perabot.html">Perabot</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-area">
+      <input id="searchInput" type="search" placeholder="Cari produk elektronik..." />
+    </div>
+
+    <div class="header-actions">
+      <button id="cartToggle" class="cart-btn" aria-label="Buka keranjang">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main">
+    <aside class="filters">
+      <h3>Filter Harga</h3>
+      <div>
+        <label>Min Harga</label>
+        <input id="minPrice" type="number" placeholder="0" />
+      </div>
+      <div>
+        <label>Maks Harga</label>
+        <input id="maxPrice" type="number" placeholder="0" />
+      </div>
+      <button id="applyFilter">Terapkan</button>
+      <button id="resetFilter" class="muted">Reset</button>
+    </aside>
+
+    <section class="catalog">
+      <div class="catalog-header">
+        <h1 id="phones">Elektronik</h1>
+        <p class="muted">Smartphone, laptop, TV, kamera, dan aksesoris.</p>
+      </div>
+
+      <div id="productsGrid" class="products-grid" data-category="electronics">
+        <!-- 10 produk elektronik -->
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=800&auto=format&fit=crop&q=60&sig=21" alt="Laptop"></div>
+          <div class="name">Laptop Pro 14"</div>
+          <div class="price">Rp 14.500.000</div>
+          <div class="info">Ringan & powerful.</div>
+          <div class="stock">Stok: <span class="stock-count">5</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=800&auto=format&fit=crop&q=60&sig=22" alt="Smartphone"></div>
+          <div class="name">Smartphone 5G</div>
+          <div class="price">Rp 6.800.000</div>
+          <div class="info">Performa & kamera.</div>
+          <div class="stock">Stok: <span class="stock-count">8</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1526178616111-74d72c4ee6f2?w=800&auto=format&fit=crop&q=60&sig=23" alt="Headphone"></div>
+          <div class="name">Headphone Wireless</div>
+          <div class="price">Rp 1.200.000</div>
+          <div class="info">Bass mantap & ANC.</div>
+          <div class="stock">Stok: <span class="stock-count">8</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1526178616111-74d72c4ee6f2?w=800&auto=format&fit=crop&q=60&sig=24" alt="Camera"></div>
+          <div class="name">Kamera Mirrorless</div>
+          <div class="price">Rp 9.700.000</div>
+          <div class="info">Resolusi tinggi untuk foto & video.</div>
+          <div class="stock">Stok: <span class="stock-count">3</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?w=800&auto=format&fit=crop&q=60&sig=25" alt="TV"></div>
+          <div class="name">Smart TV 50"</div>
+          <div class="price">Rp 7.800.000</div>
+          <div class="info">Layar jernih & suara mantap.</div>
+          <div class="stock">Stok: <span class="stock-count">4</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1542060747-02a7fbf07b9a?w=800&auto=format&fit=crop&q=60&sig=26" alt="Speaker"></div>
+          <div class="name">Speaker Bluetooth</div>
+          <div class="price">Rp 650.000</div>
+          <div class="info">Portabel & loud.</div>
+          <div class="stock">Stok: <span class="stock-count">11</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=800&auto=format&fit=crop&q=60&sig=27" alt="Microwave"></div>
+          <div class="name">Microwave Oven</div>
+          <div class="price">Rp 980.000</div>
+          <div class="info">Praktis & cepat.</div>
+          <div class="stock">Stok: <span class="stock-count">5</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1555617117-08d1c0b8f9d4?w=800&auto=format&fit=crop&q=60&sig=28" alt="Blender"></div>
+          <div class="name">Blender Dapur</div>
+          <div class="price">Rp 420.000</div>
+          <div class="info">Kuat & mudah dibersihkan.</div>
+          <div class="stock">Stok: <span class="stock-count">9</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+        <div class="items product-card">
+          <div class="img"><img src="https://images.unsplash.com/photo-1567016432779-3d1d5c7a9e2f?w=800&auto=format&fit=crop&q=60&sig=29" alt="Vacuum"></div>
+          <div class="name">Vacuum Cleaner</div>
+          <div class="price">Rp 890.000</div>
+          <div class="info">Bersihkan debu dengan mudah.</div>
+          <div class="stock">Stok: <span class="stock-count">6</span></div>
+          <button class="add-to-cart">Tambahkan ke Keranjang</button>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Cart Sidebar (sama) -->
+  <aside id="cartSidebar" class="cart-sidebar" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Keranjangmu</h2>
+      <button id="closeCart" aria-label="Tutup keranjang">✕</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">Rp 0</strong>
+      </div>
+      <div class="cart-actions">
+        <button id="checkoutBtn" class="primary">Checkout</button>
+        <button id="clearCartBtn" class="muted">Kosongkan</button>
+      </div>
+    </div>
+  </aside>
+
+  <div id="overlay" class="overlay" hidden></div>
+
+  <footer class="site-footer">
+    <div class="footer-left">© 2025 Shop9</div>
+    <div class="footer-right muted">Belanja lokal — mudah & cepat</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
