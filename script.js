@@ -12,7 +12,7 @@ const checkoutBtn = document.getElementById("checkoutBtn");
 
 let cart = JSON.parse(localStorage.getItem(CART_KEY)) || {};
 
-// helper: parse price text "Rp 1.234.000" -> number
+
 function parsePriceText(text) {
   return parseInt(text.replace(/[^\d]/g, "")) || 0;
 }
@@ -68,7 +68,7 @@ function addToCartFromCard(cardEl) {
   alert(`${name} ditambahkan ke keranjang`);
 }
 
-// wire up add-to-cart buttons
+
 function bindAddButtons() {
   document.querySelectorAll(".add-to-cart").forEach(btn => {
     btn.removeEventListener("click", btn.__shop9_listener);
@@ -78,19 +78,36 @@ function bindAddButtons() {
   });
 }
 
-// Filter price on current page
+// Filter
 const applyFilter = document.getElementById("applyFilter");
 const resetFilter = document.getElementById("resetFilter");
+
 if (applyFilter) {
   applyFilter.addEventListener("click", () => {
-    const min = parseInt(document.getElementById("minPrice").value) || 0;
-    const max = parseInt(document.getElementById("maxPrice").value) || Infinity;
+    // Ambil dan ubah input menjadi angka murni (hapus titik, koma, Rp)
+    const minRaw = document.getElementById("minPrice").value.trim();
+    const maxRaw = document.getElementById("maxPrice").value.trim();
+
+    // Konversi string input ke angka yang bersih
+    const min = parseInt(minRaw.replace(/[^\d]/g, "")) || 0;
+    const max = parseInt(maxRaw.replace(/[^\d]/g, "")) || Infinity;
+
+    console.log("Filter dari", min, "hingga", max); // debug biar tau nilai yg kebaca
+
+    // Loop setiap item produk
     document.querySelectorAll(".items").forEach(card => {
-      const price = parsePriceText(card.querySelector(".price").innerText);
-      card.style.display = (price >= min && price <= max) ? "" : "none";
+      const priceText = card.querySelector(".price").innerText;
+      const price = parseInt(priceText.replace(/[^\d]/g, "")) || 0;
+
+      if (price >= min && price <= max) {
+        card.style.display = "";
+      } else {
+        card.style.display = "none";
+      }
     });
   });
 }
+
 if (resetFilter) {
   resetFilter.addEventListener("click", () => {
     document.getElementById("minPrice").value = "";
@@ -99,7 +116,7 @@ if (resetFilter) {
   });
 }
 
-// cart sidebar toggle
+
 if (cartToggle) {
   cartToggle.addEventListener("click", () => {
     cartSidebar.classList.add("open");
@@ -123,16 +140,16 @@ if (clearCartBtn) clearCartBtn.addEventListener("click", () => {
   }
 });
 
-// checkout (simple)
+// checkout 
 if (checkoutBtn) checkoutBtn.addEventListener("click", () => {
   if (Object.keys(cart).length === 0) { alert("Keranjang kosong."); return; }
   alert("Terima kasih! (Ini demo — integrasi pembayaran belum tersedia.)");
-  // optional: clear cart after checkout
+  
   cart = {};
   saveAndRenderCart();
 });
 
-// search input (simple filter by name)
+// search input 
 document.querySelectorAll('#searchInput').forEach(si => {
   si.addEventListener('input', (e) => {
     const q = e.target.value.toLowerCase();
@@ -147,7 +164,7 @@ document.querySelectorAll('#searchInput').forEach(si => {
 bindAddButtons();
 renderCart();
 
-// Ensure newly loaded pages bind buttons (if SPA navigation not used, this runs on each page load)
+
 window.addEventListener("DOMContentLoaded", () => {
   bindAddButtons();
   renderCart();
