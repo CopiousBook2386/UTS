@@ -1,0 +1,19 @@
+https://github.com/CopiousBook2386/UTS
+
+https://youtu.be/UkB_0LFECj0?si=lSycHlGIG_Xvth7H
+
+JONATHAN RAFER SETIJO
+A11.2024.15542
+A11.4315
+
+instruksi penggunaan web :
+- untuk filter harga : periksa semua harga yang tertera di web, filter harga menyediakan fitur min dan max hargaa yang ingin di filter, gunakan angka saja tanpa huruf atau titik
+
+CONTOH :
+min : 10000000
+max : 100000000
+
+- searching : hanya menerima pencarian berdasarkan nama item yang ingin di cari
+
+CONTOH :
+smarthphone
